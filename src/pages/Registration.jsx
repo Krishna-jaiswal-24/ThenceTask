@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import  {useState} from 'react';
+import {Link, useNavigate} from "react-router-dom";
 
 const Registration = () => {
 	const [name, setName] = useState("");
@@ -39,9 +39,9 @@ const Registration = () => {
 							fill="#333333"/>
 					</svg>
 				</div>
-				<div className="border-2 rounded-full flex items-center justify-center p-4 w-12 h-12">
+				<Link to={'/'} className="border-2 rounded-full flex items-center justify-center p-4 w-12 h-12">
 					X
-				</div>
+				</Link>
 			</nav>
 
 			<div className='flex justify-center items-center flex-col w-[588px] mx-auto my-20'>
@@ -72,7 +72,7 @@ const Registration = () => {
 						</svg>
 						Enter a valid email address</p>}
 					<button
-						className={`px-9 py-6 rounded-[4rem] text-white mt-6 ${isDisabled ? 'bg-[#C9C9C9]' : 'bg-[#1C1C1C]'}`}
+						className={`px-9 py-6 rounded-[4rem] text-white mt-6 ${isDisabled ? 'bg-[#C9C9C9]' : 'bg-[#1C1C1C] hover:bg-[#4E4E4E]'}`}
 						disabled={isDisabled}
 					>
 						Submit

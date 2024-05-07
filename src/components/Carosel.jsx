@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Carosel = () => {
+	const slides = [
+		"Enhance fortune 50 company’s insights teams research capabilities",
+		"Accelerate innovation with cutting-edge technology",
+		"Drive strategic growth with data-driven decisions"
+	];
+
+	const [currentSlide, setCurrentSlide] = useState(0);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setCurrentSlide((prevSlide) =>
+				prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+			);
+		}, 3000); // Change slides every 3 seconds
+
+		return () => clearTimeout(timer);
+	}, [currentSlide]);
+
 	return (
 		<div className='mx-20'>
-			<p className='text-[2.5rem] w-[400px] font-semibold'>Enhance fortune 50 company’s insights teams research
-				capabilities</p>
+			<p className='text-[2.5rem] w-[400px] font-semibold'>{slides[currentSlide]}</p>
 
 			<div className='flex gap-4 my-20'>
-				<div className="w-3 h-3 bg-green rounded-full"></div>
-				<div className="w-3 h-3 bg-[#E4E3E3] rounded-full"></div>
-				<div className="w-3 h-3 bg-[#E4E3E3] rounded-full"></div>
+				{slides.map((_, index) => (
+					<div
+						key={index}
+						className={`w-3 h-3 rounded-full ${index === currentSlide ? 'bg-green' : 'bg-[#E4E3E3]'}`}
+					></div>
+				))}
 			</div>
 
-			<button className='px-10 py-8 bg-black text-white rounded-full flex gap-4 hover:bg-[#4E4E4E]'>Explore More
+			<button
+				className='px-10 py-8 bg-black text-white rounded-full flex gap-4 hover:bg-[#4E4E4E]'
+				onClick={() => setCurrentSlide((currentSlide + 1) % slides.length)}
+			>
+				Explore More
 				<svg width="24" height="24"
 				     viewBox="0 0 24 24"
 				     fill="none"
