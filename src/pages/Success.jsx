@@ -1,13 +1,15 @@
 import {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 const Success = () => {
 	const [count, setCount] = useState(5);
+	const navigate = useNavigate();
 	setTimeout(() => {
 		setCount(count - 1);
 	}, 1000);
 
 	if(count === 0) {
-		window.location.href = '/';
+		navigate('/');
 	}
 
 	return (

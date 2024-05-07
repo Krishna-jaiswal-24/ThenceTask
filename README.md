@@ -64,3 +64,21 @@ This project includes the following features:
 - Carousel also works with a 3 seconds duration
 - Redirection to home page working with set timeout and useEffect hook
 
+## Project Structure
+
+- src 
+    - assets
+    - pages  
+        - Home  (Screen 1)
+        - Register (Screen 2)
+        - Success (Screen 3)
+    - components
+        - Carosel 
+        - Footer
+        - Navbar 
+        - Accordion (drop down questions)
+        - HeroImg (for editable hero image)
+    - App.js  
+    - main.js  
+    - index.css
+    - App.css

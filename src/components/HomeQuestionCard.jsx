@@ -1,6 +1,8 @@
 import Arrow from '../assets/Arrow.svg';
 import Accordian from '../components/Accordian.jsx';
 
+
+// Dummy data for FAQ items
 const faqItems = [
 	{question: "Do you offer freelancers?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."},
 	{
@@ -39,6 +41,7 @@ const HomeQuestionCard = () => {
 
 
 			<div className="w-1/2">
+				{/*Sending the dummy data as props*/}
 				<Accordian items={faqItems}/>
 			</div>
 
