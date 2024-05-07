@@ -43,11 +43,11 @@ Follow these steps to get your development environment running:
     ```
 4. To run the application locally:
     ```bash
-    npm start
+    npm run dev
     ```
    or with yarn:
     ```bash
-    yarn start
+    yarn dev
     ```
 
 This will start the development server and open the application in your default web browser.
