@@ -26,7 +26,7 @@ const Registration = () => {
 		setIsDisabled(!name || !email || !emailValid);
 	};
 
-	const handleSubmit=(e)=>{
+	const handleSubmit=()=>{
 		navigate('/success');
 	}
 	return (
@@ -39,7 +39,7 @@ const Registration = () => {
 							fill="#333333"/>
 					</svg>
 				</div>
-				<Link to={'/'} className="border-2 rounded-full flex items-center justify-center p-4 w-12 h-12">
+				<Link to='/' className="border-2 rounded-full flex items-center justify-center p-4 w-12 h-12">
 					X
 				</Link>
 			</nav>

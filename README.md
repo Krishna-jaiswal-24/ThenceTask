@@ -61,5 +61,6 @@ This project includes the following features:
 - The hero image can be changed in the code by just replacing the image URL.
 - Used regular expression for email validation.
 - Used React Router for navigation.
-
+- Carousel also works with a 3 seconds duration
+- Redirection to home page working with set timeout and useEffect hook
 
